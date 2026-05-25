@@ -116,7 +116,11 @@ class PipelineManager:
 
             await self._emit(stage="complete", progress=1.0, status="done",
                              message="Indexing complete")
-            self._current_stage = "complete"
+            ready_count = sum(1 for d in self._documents if d["status"] == "ready")
+            if ready_count == 0:
+                self._current_stage = "error"
+            else:
+                self._current_stage = "complete"
 
         except Exception as exc:
             await self._emit(stage="error", status="failed", message=str(exc))
