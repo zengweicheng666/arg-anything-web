@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raganything-webui"
+version = "0.1.0"
+description = "Web UI for RAG-Anything"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "raganything",
+]
+
+[tool.setuptools.packages.find]
+include = ["backend*"]

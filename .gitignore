@@ -1,0 +1,36 @@
+# Config persistence (API keys, etc.)
+config.json
+
+# Runtime output
+rag_storage/
+output/
+
+# Virtual environment
+.venv/
+venv/
+.env
+
+# Frontend dependencies
+webui/node_modules/
+
+# Frontend build output
+webui/dist/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
