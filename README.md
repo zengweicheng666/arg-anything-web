@@ -13,10 +13,29 @@ A web interface for [RAG-Anything](https://github.com/HKUDS/RAG-Anything) — a 
 - **Knowledge graph**: view extracted entities and relations
 - **Settings management**: configure parser, LLM model, embedding model, API keys
 
+## Prerequisites
+
+This UI depends on [RAG-Anything](https://github.com/HKUDS/RAG-Anything) as the core engine. Install it first:
+
+```bash
+git clone https://github.com/HKUDS/RAG-Anything.git
+cd RAG-Anything
+pip install -e .
+cd ..
+```
+
+Verify the installation:
+
+```bash
+pip show raganything
+# or
+python -c "import raganything; print(raganything.__version__)"
+```
+
 ## Quick Start
 
 ```bash
-# Install dependencies
+# Install Python dependencies
 pip install -e .
 
 # Install frontend dependencies
@@ -37,6 +56,8 @@ Open http://127.0.0.1:8765
 chmod +x start.sh
 ./start.sh
 ```
+
+Once running, the version numbers for `raganything` and `mineru` are displayed in the top-right corner of the UI.
 
 ## Usage
 

@@ -13,6 +13,25 @@
 - **知识图谱**：查看提取的实体和关系
 - **设置管理**：配置解析器、LLM 模型、Embedding 模型、API 密钥
 
+## 前置依赖
+
+本 UI 依赖 [RAG-Anything](https://github.com/HKUDS/RAG-Anything) 作为核心引擎。请先安装：
+
+```bash
+git clone https://github.com/HKUDS/RAG-Anything.git
+cd RAG-Anything
+pip install -e .
+cd ..
+```
+
+验证安装：
+
+```bash
+pip show raganything
+# 或
+python -c "import raganything; print(raganything.__version__)"
+```
+
 ## 快速开始
 
 ```bash
@@ -37,6 +56,8 @@ python -m backend
 chmod +x start.sh
 ./start.sh
 ```
+
+启动后，右上角会显示 `raganything` 和 `mineru` 的版本号。
 
 ## 使用说明
 
